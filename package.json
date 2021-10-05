@@ -1,0 +1,33 @@
+{
+  "name": "crapcorpbot",
+  "version": "2.0.0",
+  "description": "crap corp bot written in discord.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ./deploy-commands.js && node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "./.git/"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "economy",
+    "stocks",
+    "game",
+    "javascript",
+    "node"
+  ],
+  "author": "poomaster",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
