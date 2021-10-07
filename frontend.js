@@ -1,16 +1,14 @@
-const { FileManager } = require('./filemanager.js');
 const { StockBroker } = require('./stockbroker.js');
 
 class FrontEnd {
 	constructor(filePath) {
-		this.filemanager = new FileManager(filePath);
 		this.stockbroker = new StockBroker(filePath);
 	}
 	displayOwnedStocks(interaction) {
-		const user = this.filemanager.users[this.filemanager.findUserIndex(interaction.user.id)];
+		const stocks = this.stockbroker.getUserStocks(interaction.user.id);
 		let out = '';
-		for (let i = 0;i < user.stocks.length;i++) {
-			const stock = user.stocks[i];
+		for (let i = 0;i < stocks.length;i++) {
+			const stock = stocks[i];
 			out += `you have ${stock.amount} of ${stock.name}\n`;
 		}
 		return out;
